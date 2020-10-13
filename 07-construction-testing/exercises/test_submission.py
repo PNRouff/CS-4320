@@ -28,5 +28,5 @@ def grading_system():
     return gradingSystem
 @pytest.fixture
 def grading_staff():
-    gradingStaff = Staff.Staff()
+    gradingStaff = Staff.Staff(grading_system.load_user_db())
     return gradingStaff
