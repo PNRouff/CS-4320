@@ -36,15 +36,14 @@ def test_add_student(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.add_student('pnrouff','software_engineering')
 
-#Test 06 - P
+#Test 06 - P - Done
 def test_drop_student(grading_system):
     grading_system.login('goggins', 'augurrox')
-    classes = grading_system.users['akend3']
-    print(classes)
     grading_system.usr.drop_student('akend3','databases')
     classes = grading_system.users['akend3']
     print(classes)
-    assert False
+    if classes!={'courses': {'comp_sci': {'assignment1': {'grade': 0, 'submission_date': '2/1/20', 'submission': 'Blah Blah Blah', 'ontime': True}, 'assignment2': {'grade': 66, 'submission_date': '2/8/20', 'submission': 'Blah2 Blah2 Blah2', 'ontime': True}}}, 'password': '123454321', 'role': 'student'}:
+        assert False
 
 #Test 07 - P - Done
 def test_submit_assignment(grading_system):
