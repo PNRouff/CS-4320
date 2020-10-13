@@ -68,7 +68,8 @@ def test_check_grades(grading_system):
     grading_system.login('akend3', '123454321')
     grades = grading_system.usr.check_grades('comp_sci')
     print(grades)
-    assert False
+    if grades !=[['assignment1', 0], ['assignment2', 66]]:
+        assert False
 
 #Test 10 - F
 def test_view_assignments(grading_system):
