@@ -40,8 +40,11 @@ def test_add_student(grading_system):
 def test_drop_student(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.drop_student('akend','databases')
+    classes = grading_system.users['akend3']
+    print(classes)
+    assert False
 
-#Test 07 - P
+#Test 07 - P - Done
 def test_submit_assignment(grading_system):
     grading_system.login('hdjsr7', 'pass1234')
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','Blahhhhh', '03/01/20')
