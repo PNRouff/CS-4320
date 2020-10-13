@@ -16,8 +16,8 @@ def test_check_password(grading_system):
     grading_system.check_password('cmhbf5', 'bestTA')
 
 #Test 03
-def test_change_grade(grading_system):
-    grading_system.change_grade('akend3','comp_sci','assignment1',80)
+def test_change_grade(grading_staff):
+    grading_staff.change_grade('akend3','comp_sci','assignment1',80)
 
 
 
@@ -26,3 +26,6 @@ def grading_system():
     gradingSystem = System.System()
     gradingSystem.load_data()
     return gradingSystem
+def grading_staff():
+    gradingStaff = Staff.Staff()
+    return gradingStaff
