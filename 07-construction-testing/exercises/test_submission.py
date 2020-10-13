@@ -19,7 +19,7 @@ def test_check_password(grading_system):
 #Test 03 - broken
 def test_change_grade(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
-    grading_system.usr.change_grade('akend3','comp_sci','assignment1',80)
+    grading_system.usr.change_grade('akend3','comp_sci','assignment1','80')
 
 #Test 04 - broken
 def test_create_assignment(grading_system):
