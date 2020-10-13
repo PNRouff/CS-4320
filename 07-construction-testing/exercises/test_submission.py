@@ -9,7 +9,10 @@ def test_login(grading_system):
 
 #Test 02 - F
 def test_check_password(grading_system):
-    grading_system.check_password('cmhbf5', 'bestTa')
+    test = grading_system.check_password('cmhbf5', 'BESTta')
+    test2 = grading_system.check_password('cmhbf5', 'bestTA')
+    if test==test2:
+        assert False
 
 #Test 03 - P - Done
 def test_change_grade(grading_system):
