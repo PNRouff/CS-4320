@@ -11,7 +11,8 @@ def test_login(grading_system):
 def test_check_password(grading_system):
     test = grading_system.check_password('cmhbf5', 'BESTta')
     #test2 = grading_system.check_password('cmhbf5', 'bestTA')
-    if test:
+    #if test:
+    print(test)
         assert False
 
 #Test 03 - P - Done
