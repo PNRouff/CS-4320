@@ -11,13 +11,13 @@ def test_login(grading_system):
 def test_check_password(grading_system):
     grading_system.check_password('cmhbf5', 'bestTa')
 
-#Test 03 - P
+#Test 03 - P - Done
 def test_change_grade(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
     grading_system.usr.change_grade('akend3','comp_sci','assignment1','80')
     grades = grading_system.usr.check_grades('akend3','comp_sci')
     print(grades)
-    if grades==[['assignment1', 0], ['assignment2', 66]]:
+    if grades!=[['assignment1', 0], ['assignment2', 66]]:
         assert False
         
     
@@ -26,6 +26,11 @@ def test_change_grade(grading_system):
 def test_create_assignment(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
     grading_system.usr.create_assignment('assignmentTest','10/15/2020','comp_sci')
+    grading_system.login('akend3', '123454321')
+    assignments = grading_system.view_assignments('comp_sci')
+    print (assignments)
+    assert False
+
 
 #Test 05 - F
 def test_add_student(grading_system):
