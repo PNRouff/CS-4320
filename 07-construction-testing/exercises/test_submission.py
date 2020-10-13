@@ -15,11 +15,13 @@ def test_login(grading_system):
 def test_check_password(grading_system):
     grading_system.check_password('cmhbf5', 'bestTA')
 
-#Test 03
+#Test 03 - broken
 def test_change_grade(grading_staff):
     grading_staff.change_grade('akend3','comp_sci','assignment1',80)
 
-
+#Test 04
+def test_create_assignment(grading_staff):
+    grading_staff.create_assignment('assignmentTest','10/15/2020','comp_sci')
 
 @pytest.fixture
 def grading_system():
