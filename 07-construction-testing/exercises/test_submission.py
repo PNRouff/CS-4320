@@ -1,7 +1,5 @@
 import pytest
 import System
-import Staff
-import Professor
 
 
 #Test 01
