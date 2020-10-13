@@ -19,17 +19,16 @@ def test_change_grade(grading_system):
     print(grades)
     if grades!=[['assignment1', 0], ['assignment2', 66]]:
         assert False
-        
-    
 
-#Test 04 - P
+#Test 04 - P - Done
 def test_create_assignment(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
     grading_system.usr.create_assignment('assignmentTest','10/15/2020','comp_sci')
     grading_system.login('akend3', '123454321')
     assignments = grading_system.usr.view_assignments('comp_sci')
     print (assignments)
-    assert False
+    if assignments!=[['assignment1', '2/2/20'], ['assignment2', '2/10/20'], ['assignmentTest', '10/15/2020']]:
+        assert False
 
 
 #Test 05 - F
