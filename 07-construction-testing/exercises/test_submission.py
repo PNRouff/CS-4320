@@ -15,6 +15,10 @@ def test_check_password(grading_system):
 def test_change_grade(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
     grading_system.usr.change_grade('akend3','comp_sci','assignment1','80')
+    grades = grading_system.usr.check_grades('akend3','comp_sci')
+    print(grades)
+        
+    
 
 #Test 04 - P
 def test_create_assignment(grading_system):
