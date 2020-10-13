@@ -45,6 +45,12 @@ def test_drop_student(grading_system):
 def test_submit_assignment(grading_system):
     grading_system.login('hdjsr7', 'pass1234')
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','Blahhhhh', '03/01/20')
+    assignments = grading_system.users['hdjsr7']['courses']['cloud_computing']
+    grades = []
+    for key in assignments:
+        grades.append([key, assignments[key]['grade']])
+    print grades
+    assert False
 
 #Test 08 - P
 def test_check_ontime(grading_system):
