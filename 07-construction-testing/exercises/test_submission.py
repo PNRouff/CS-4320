@@ -41,7 +41,8 @@ def test_submit_assignment(grading_system):
 
 #Test 08
 def test_check_ontime(grading_system):
-    grading_system.check_ontime('03/01/20','03/02/20')
+    grading_system.login('hdjsr7', 'pass1234')
+    grading_system.usr.check_ontime('03/01/20','03/02/20')
 
 #Test 09
 def test_check_grades(grading_system):
