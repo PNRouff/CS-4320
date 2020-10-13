@@ -27,7 +27,7 @@ def test_create_assignment(grading_system):
 #Test 05
 def test_add_student(grading_system):
     grading_system.login('goggins', 'augurrox')
-    grading_system.usr.add_student('pnrouff','comp_sci')
+    grading_system.usr.add_student('pnrouff','software_engineering')
 
 #Test 06
 
