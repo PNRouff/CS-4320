@@ -27,12 +27,12 @@ def test_create_assignment(grading_system):
 #Test 05
 def test_add_student(grading_system):
     grading_system.login('goggins', 'augurrox')
-    grading_system.usr.add_student('pnrouff','software_engineering')
+    grading_system.usr.add_student('yted91','software_engineering')
 
 #Test 06
 def test_drop_student(grading_system):
     grading_system.login('goggins', 'augurrox')
-    grading_system.usr.drop_student('pnrouff','software_engineering')
+    grading_system.usr.drop_student('yted91','software_engineering')
 
 #Test 07
 def test_submit_assignment(grading_system):
