@@ -17,7 +17,7 @@ def test_change_grade(grading_system):
     grading_system.usr.change_grade('akend3','comp_sci','assignment1','80')
     grades = grading_system.usr.check_grades('akend3','comp_sci')
     print(grades)
-    if grades=="[['assignment1', 0], ['assignment2', 66]]"
+    if grades=='[[\'assignment1\', 0], [\'assignment2\', 66]]'
         assert True
     assert False
         
