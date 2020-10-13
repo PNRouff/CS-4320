@@ -56,15 +56,19 @@ def test_submit_assignment(grading_system):
     if assignments!={'assignment1': {'grade': 'N/A', 'submission_date': '03/01/20', 'submission': 'Blahhhhh', 'ontime': True}, 'assignment2': {'Grade': 100, 'Submission Data': '2/3/20', 'Submission': 'Blah2 Blah2 Blah2', 'ontime': True}}:
         assert False
 
-#Test 08 - P
+#Test 08 - F
 def test_check_ontime(grading_system):
     grading_system.login('hdjsr7', 'pass1234')
-    grading_system.usr.check_ontime('03/01/20','03/02/20')
+    test = grading_system.usr.check_ontime('03/05/20','03/02/20')
+    if (test==True):
+        assert False
 
-#Test 09 - F
+#Test 09 - P
 def test_check_grades(grading_system):
-    grading_system.login('goggins', 'augurrox')
-    grading_system.usr.check_grades('software_engineering')
+    grading_system.login('akend3', '123454321')
+    grades = grading_system.usr.check_grades('software_engineering')
+    print(grades)
+    assert False
 
 #Test 10 - F
 def test_view_assignments(grading_system):
