@@ -40,7 +40,7 @@ def test_add_student(grading_system):
 def test_drop_student(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.drop_student('akend','databases')
-    classes = grading_system.users['akend3']
+    classes = grading_system.users['akend']
     print(classes)
     assert False
 
