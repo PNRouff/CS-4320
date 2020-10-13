@@ -27,7 +27,7 @@ def test_create_assignment(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
     grading_system.usr.create_assignment('assignmentTest','10/15/2020','comp_sci')
     grading_system.login('akend3', '123454321')
-    assignments = grading_system.view_assignments('comp_sci')
+    assignments = grading_system.usr.view_assignments('comp_sci')
     print (assignments)
     assert False
 
