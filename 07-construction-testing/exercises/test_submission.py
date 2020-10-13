@@ -66,7 +66,7 @@ def test_check_ontime(grading_system):
 #Test 09 - P
 def test_check_grades(grading_system):
     grading_system.login('akend3', '123454321')
-    grades = grading_system.usr.check_grades('software_engineering')
+    grades = grading_system.usr.check_grades('comp_sci')
     print(grades)
     assert False
 
