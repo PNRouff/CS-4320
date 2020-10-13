@@ -26,6 +26,7 @@ def grading_system():
     gradingSystem = System.System()
     gradingSystem.load_data()
     return gradingSystem
+@pytest.fixture
 def grading_staff():
     gradingStaff = Staff.Staff()
     return gradingStaff
