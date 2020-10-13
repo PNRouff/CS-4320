@@ -49,7 +49,7 @@ def test_submit_assignment(grading_system):
     grades = []
     for key in assignments:
         grades.append([key, assignments[key]['grade']])
-    print grades
+    print(grades)
     assert False
 
 #Test 08 - P
