@@ -55,14 +55,14 @@ def test_submit_assignment(grading_system):
     if assignments!={'assignment1': {'grade': 'N/A', 'submission_date': '03/01/20', 'submission': 'Blahhhhh', 'ontime': True}, 'assignment2': {'Grade': 100, 'Submission Data': '2/3/20', 'Submission': 'Blah2 Blah2 Blah2', 'ontime': True}}:
         assert False
 
-#Test 08 - F
+#Test 08 - F - Done
 def test_check_ontime(grading_system):
     grading_system.login('hdjsr7', 'pass1234')
     test = grading_system.usr.check_ontime('03/05/20','03/02/20')
     if (test==True):
         assert False
 
-#Test 09 - P
+#Test 09 - P - Done
 def test_check_grades(grading_system):
     grading_system.login('akend3', '123454321')
     grades = grading_system.usr.check_grades('comp_sci')
@@ -70,18 +70,18 @@ def test_check_grades(grading_system):
     if grades !=[['assignment1', 0], ['assignment2', 66]]:
         assert False
 
-#Test 10 - F
+#Test 10 - F - Done
 def test_view_assignments(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.view_assignments('databases')
 
-#Test 11 - F
+#Test 11 - F - Done
 #Cannot submit to assignment for class you aren't in
 def test_submit_random_assignment(grading_system):
     grading_system.login('akend3', '123454321')
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','this should fail', '03/01/20')
 
-#Test 12 - F
+#Test 12 - F - Done
 #Professors should not be able to add students to classes they don't teach
 def test_add_student_to_random_class(grading_system):
     grading_system.login('goggins', 'augurrox')
@@ -92,7 +92,7 @@ def test_add_student_to_random_class(grading_system):
     if classes=={'courses': {'comp_sci': {'assignment1': {'grade': 0, 'submission_date': '2/1/20', 'submission': 'Blah Blah Blah', 'ontime': True}, 'assignment2': {'grade': 66, 'submission_date': '2/8/20', 'submission': 'Blah2 Blah2 Blah2', 'ontime': True}}, 'cloud_computing': {'assignment1': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}, 'assignment2': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}}}, 'password': '123454321', 'role': 'student'}:
         assert False
 
-#Test 13 - F
+#Test 13 - F - Done
 #TAs should not be able to change grades in classes they are not TA's for
 def test_change_random_grade(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
@@ -102,7 +102,7 @@ def test_change_random_grade(grading_system):
     if grades==[['assignment1', 0], ['assignment2', 66]]:
         assert False
 
-#Test 14 - F
+#Test 14 - F - Done
 #Professors should not be able to add assignments to classes they don't teach
 def test_create_random_assignment(grading_system):
     grading_system.login('goggins', 'augurrox')
@@ -113,7 +113,7 @@ def test_create_random_assignment(grading_system):
     if assignments==[['assignment1', '2/2/20'], ['assignment2', '2/10/20'], ['assignmentTest', '10/15/2020']]:
         assert False
 
-#Test 15 - F
+#Test 15 - F - Done
 #TA's should not be able to submit assignments
 def test_submit_assignment_as_TA(grading_system):
     grading_system.login('cmhbf5', 'bestTA')
