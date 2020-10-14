@@ -93,7 +93,13 @@ def test_add_student_to_random_class(grading_system):
         assert False
 
 #Test 13 - F
-    
+#TAs should not be able to change grades in classes they are not TA's for
+def test_change_random_grade(grading_system):
+    grading_system.login('cmhbf5', 'bestTA')
+    grading_system.usr.change_grade('hdjsr7','databases','assignment1','80')
+    grades = grading_system.usr.check_grades('akend3','comp_sci')
+    print(grades)
+    assert False
 
 @pytest.fixture
 def grading_system():
