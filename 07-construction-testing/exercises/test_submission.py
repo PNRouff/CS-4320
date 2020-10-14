@@ -84,6 +84,11 @@ def test_submit_random_assignment(grading_system):
 def test_add_student_to_random_class(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.add_student('akend3','software_engineering')
+    grading_system.login('akend3', '123454321')
+     classes = grading_system.users['akend3']
+    print(classes)
+    #if classes!=
+    assert False
 
 
 @pytest.fixture
