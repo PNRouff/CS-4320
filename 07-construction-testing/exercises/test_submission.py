@@ -80,6 +80,12 @@ def test_submit_random_assignment(grading_system):
     grading_system.login('akend3', '123454321')
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','this should fail', '03/01/20')
 
+#Test 12 - F
+def test_add_student_to_random_class(grading_system):
+    grading_system.login('goggins', 'augurrox')
+    grading_system.usr.add_student('akend3','software_engineering')
+
+
 @pytest.fixture
 def grading_system():
     gradingSystem = System.System()
