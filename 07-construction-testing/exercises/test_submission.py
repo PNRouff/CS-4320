@@ -102,7 +102,7 @@ def test_change_random_grade(grading_system):
     if grades==[['assignment1', 0], ['assignment2', 66]]:
         assert False
 
-#Test 14 -F
+#Test 14 - F
 #Professors should not be able to add assignments to classes they don't teach
 def test_create_random_assignment(grading_system):
     grading_system.login('goggins', 'augurrox')
@@ -110,8 +110,10 @@ def test_create_random_assignment(grading_system):
     grading_system.login('hdjsr7', 'pass1234')
     assignments = grading_system.usr.view_assignments('cloud_computing')
     print(assignments)
-    assert False
+    if assignments==[['assignment1', '2/2/20'], ['assignment2', '2/10/20'], ['assignmentTest', '10/15/2020']]:
+        assert False
 
+#Test 15 - F
 
 @pytest.fixture
 def grading_system():
