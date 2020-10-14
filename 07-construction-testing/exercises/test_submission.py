@@ -82,16 +82,18 @@ def test_submit_random_assignment(grading_system):
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','this should fail', '03/01/20')
 
 #Test 12 - F
-#Professors should not be able to add students to class
+#Professors should not be able to add students to classes they don't teach
 def test_add_student_to_random_class(grading_system):
     grading_system.login('goggins', 'augurrox')
     grading_system.usr.add_student('akend3','cloud_computing')
     grading_system.login('akend3', '123454321')
     classes = grading_system.users['akend3']
     print(classes)
-    #if classes=={'courses': {'comp_sci': {'assignment1': {'grade': 0, 'submission_date': '2/1/20', 'submission': 'Blah Blah Blah', 'ontime': True}, 'assignment2': {'grade': 66, 'submission_date': '2/8/20', 'submission': 'Blah2 Blah2 Blah2', 'ontime': True}}, 'software_engineering': {'assignment1': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}, 'assignment2': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}}}, 'password': '123454321', 'role': 'student'}:
-    assert False
+    if classes=={'courses': {'comp_sci': {'assignment1': {'grade': 0, 'submission_date': '2/1/20', 'submission': 'Blah Blah Blah', 'ontime': True}, 'assignment2': {'grade': 66, 'submission_date': '2/8/20', 'submission': 'Blah2 Blah2 Blah2', 'ontime': True}}, 'cloud_computing': {'assignment1': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}, 'assignment2': {'grade': 'N/A', 'submission_date': 'N/A', 'submission': 'N/A', 'ontime': 'N/A'}}}, 'password': '123454321', 'role': 'student'}:
+        assert False
 
+#Test 13 - F
+    
 
 @pytest.fixture
 def grading_system():
