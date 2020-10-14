@@ -76,7 +76,7 @@ def test_view_assignments(grading_system):
     grading_system.usr.view_assignments('databases')
 
 #Test 11 - F
-#Cannot submit to assignment you aren't on
+#Cannot submit to assignment for class you aren't in
 def test_submit_random_assignment(grading_system):
     grading_system.login('akend3', '123454321')
     grading_system.usr.submit_assignment('cloud_computing', 'assignment1','this should fail', '03/01/20')
@@ -114,6 +114,11 @@ def test_create_random_assignment(grading_system):
         assert False
 
 #Test 15 - F
+#TA's should not be able to submit assignments
+def test_submit_assignment_as_TA(grading_system):
+    grading_system.login('cmhbf5', 'bestTA')
+    grading_system.usr.submit_assignment('cloud_computing', 'assignment1','this should fail', '03/01/20')
+
 
 @pytest.fixture
 def grading_system():
